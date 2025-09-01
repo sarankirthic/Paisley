@@ -16,16 +16,17 @@ indiehackers:
 hackernews:
   name: Hacker News
   website: https://news.ycombinator.com/news
-  post: ' .athing'
-  link: '.storylink'
-  title: '.storylink'
-  author: '+tr a'
+  post: 'tr.athing'
+  link: '.titleline > a'
+  title: '.titleline > a'
+  author: 'tr.athing + tr .hnuser'
   points: '+tr .score'
-  comments: '+tr a:nth-child(6)'
+  comments: '+tr a:contains("comment")'
   domain: '.sitestr'
-  commentLink: '+tr a:nth-child(6)'
+  commentLink: '+tr a:contains("comment")'
   outsideContext: true
   ignore: *ignore
+
 
 billboard-100:
   website: https://billboard.com/charts/hot-100

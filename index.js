@@ -1,12 +1,12 @@
-;(async () => {
-  const SubscribersHandler = require('./classes/SubscribersHandler.js')
-  const sh = SubscribersHandler.init()
-  await sh.load()
-  await sh.start()
+(async () => {
+    const SubscribersHandler = require('./classes/SubscribersHandler.js')
+    const sh = SubscribersHandler.init()
+    await sh.load()
+    await sh.start()
 
-  const MailHandler = require('./classes/MailHandler.js')
-  const mh = MailHandler.init()
-  await mh.start()
+    const MailHandler = require('./classes/MailHandler.js')
+    const mh = MailHandler.init()
+    await mh.start()
 })()
-  .then(() => console.log('all done'))
-  .catch((e) => console.log(e))
+    .then(() => console.log('all done'))
+    .catch((e) => console.log(e))

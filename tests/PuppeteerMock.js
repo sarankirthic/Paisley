@@ -1,49 +1,49 @@
 const mockPage = {
-  goto() {
-    return Promise.resolve()
-  },
+    goto() {
+        return Promise.resolve()
+    },
 
-  $$() {
-    return Promise.resolve([])
-  },
+    $$() {
+        return Promise.resolve([])
+    },
 
-  $() {
-    return Promise.resolve()
-  },
+    $() {
+        return Promise.resolve()
+    },
 
-  $eval() {
-    return Promise.resolve()
-  },
+    $eval() {
+        return Promise.resolve()
+    },
 
-  on() {
-    return true
-  },
+    on() {
+        return true
+    },
 
-  setOfflineMode(value) {
-    return value
-  }
+    setOfflineMode(value) {
+        return value
+    }
 }
 
 const mockBrowser = {
-  newPage() {
-    return Promise.resolve(mockPage)
-  },
+    newPage() {
+        return Promise.resolve(mockPage)
+    },
 
-  close() {
-    return Promise.resolve()
-  }
+    close() {
+        return Promise.resolve()
+    }
 }
 
 const mockPuppeteer = {
-  launch() {
-    return Promise.resolve(mockBrowser)
-  }
+    launch() {
+        return Promise.resolve(mockBrowser)
+    }
 }
 
 const mockElementHandle = {
-  $eval() {
-    return Promise.resolve()
-  }
+    $eval() {
+        return Promise.resolve()
+    }
 }
 
 module.exports = { mockPage, mockBrowser, mockPuppeteer, mockElementHandle }
